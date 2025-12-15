@@ -80,7 +80,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
             className="mx-auto mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl"
           >
-            AI Engineer & Full-Stack Builder.
+            Data Scientist & Full-Stack Developer specializing in AI, LLMs, and production-grade applications.
           </motion.p>
         </motion.div>
       </div>
