@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --background: #F5F5F7;
+  --foreground: #111;
+  --card: #FFFFFF;
+  --card-foreground: #111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111;
+  --primary: #111;
+  --primary-foreground: #F5F5F7;
+  --secondary: #E5E5E5;
+  --secondary-foreground: #111;
+  --muted: #E5E5E5;
+  --muted-foreground: #666;
+  --accent: #6366f1;
+  --accent-foreground: #FFFFFF;
+  --destructive: #ef4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E5E5;
+  --input: #E5E5E5;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #8b5cf6;
+  --chart-3: #ec4899;
+  --chart-4: #f59e0b;
+  --chart-5: #10b981;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Inter', sans-serif;
+  }
+}
+
