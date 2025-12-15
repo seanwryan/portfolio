@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 interface GitHubProject {
   id: number
   name: string
+  displayTitle?: string
   description: string
   url: string
   homepage?: string
@@ -93,7 +94,7 @@ export default function Projects() {
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}
-                title={project.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                title={project.displayTitle || project.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                 description={project.description || 'No description available'}
                 tags={getTechTags(project)}
                 link={project.homepage || project.url}

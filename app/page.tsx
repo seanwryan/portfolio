@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { Github, Linkedin } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -66,6 +68,17 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+            className="mb-4"
+          >
+            <h2 className="text-2xl sm:text-3xl font-medium text-foreground mb-6">
+              Sean W. Ryan
+            </h2>
+          </motion.div>
+
           <h1 className="mb-6 text-balance font-sans text-6xl font-bold leading-tight tracking-tight text-foreground sm:text-7xl md:text-8xl">
             Building the brain,
             <br />
@@ -78,10 +91,37 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-            className="mx-auto mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl"
+            className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl"
           >
-            Data Scientist & Full-Stack Developer specializing in AI, LLMs, and production-grade applications.
+            Data Scientist & Full-Stack Developer specializing in AI, LLMs, and production-grade applications. 
+            Building intelligent systems that transform complex data into actionable insights.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+            className="flex items-center justify-center gap-6"
+          >
+            <Link
+              href="https://github.com/seanwryan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="h-7 w-7" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/seanwryan17"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-7 w-7" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </main>
